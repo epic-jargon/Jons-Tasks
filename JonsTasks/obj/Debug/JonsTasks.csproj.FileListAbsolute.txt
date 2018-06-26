@@ -1,0 +1,7 @@
+D:\OneDrive\1.Workspace\C#\JonsTasks\JonsTasks\bin\Debug\JonsTasks.exe.config
+D:\OneDrive\1.Workspace\C#\JonsTasks\JonsTasks\bin\Debug\JonsTasks.exe
+D:\OneDrive\1.Workspace\C#\JonsTasks\JonsTasks\bin\Debug\JonsTasks.pdb
+D:\OneDrive\1.Workspace\C#\JonsTasks\JonsTasks\obj\Debug\JonsTasks.csprojResolveAssemblyReference.cache
+D:\OneDrive\1.Workspace\C#\JonsTasks\JonsTasks\obj\Debug\JonsTasks.csproj.CoreCompileInputs.cache
+D:\OneDrive\1.Workspace\C#\JonsTasks\JonsTasks\obj\Debug\JonsTasks.exe
+D:\OneDrive\1.Workspace\C#\JonsTasks\JonsTasks\obj\Debug\JonsTasks.pdb
