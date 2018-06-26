@@ -9,10 +9,6 @@ namespace JonsTasks
 {
     class T1_URLChecker
     {
-        private static String[] regex =
-            {
-                "^(https?|ftp|file):\\/\\/[-a-zA-Z0-9+&@#\\/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#\\/%=~_|]\\.(co.uk|com)"
-            };
         static void Main(string[] args)
         {
             while (true)
@@ -26,20 +22,21 @@ namespace JonsTasks
                     Console.WriteLine("help, exit");
                 else
                 {
-                    Console.WriteLine((checkIfRegexMatches(input)) ? "url is valid" : "url is not valid");
+                    Console.WriteLine((checkIfEmailIsValid(input)) ? "email is valid" : "email is not valid");
                 }
             }
         }
-        static bool checkIfRegexMatches(String input)
+        static bool checkIfEmailIsValid(String input)
         {
-            foreach (String s in regex)
-            {
-                Regex rgx = new Regex(s);
-                Match match = rgx.Match(input);
-                if (match.Success)
+                try
+                {
+                    var address = new System.Net.Mail.MailAddress(input);
                     return true;
-            }
-            return false;
+                }
+                catch
+                {
+                    return false;
+                }
         }
     }
 }
