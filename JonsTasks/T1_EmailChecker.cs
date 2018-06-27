@@ -9,11 +9,14 @@ namespace JonsTasks
 {
     class T1_EmailChecker
     {
-        public const string Welcome = "welcome to the email checker";
+        public const string WelcomeMessage = "Welcome to the E-mail checker";
+        public const string ValidMessage = "E-mail is valid";
+        public const string InValidMessage = "E-mail is not valid";
+        public const string InValidMessage = "There was an error :";
 
         static void Main(string[] args)
         {
-            Console.WriteLine(Welcome);
+            Console.WriteLine(WelcomeMessage);
             Console.WriteLine("============================");
             while (true)
             {
@@ -27,7 +30,7 @@ namespace JonsTasks
                     Console.WriteLine("help, exit");
                 else
                 {
-                    Console.WriteLine((checkIfEmailIsValid(input)) ? "email is valid" : "email is not valid");
+                    Console.WriteLine((checkIfEmailIsValid(input)) ? ValidMessage : InValidMessage);
                 }
             }
         }
@@ -38,9 +41,10 @@ namespace JonsTasks
                     var address = new System.Net.Mail.MailAddress(input);
                     return true;
                 }
-                catch //(incorectFormatExcrption ex)
-            {
-                    return false;
+                catch (FormatException exception)
+                {
+                Console.WriteLine(ErrorMessage + " " + exception);
+                return false;
                 }
         }
     }
