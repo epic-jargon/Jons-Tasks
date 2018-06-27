@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JonsTasks
 {
-    class T1_URLChecker
+    class T1_EmailChecker
     {
         static void Main(string[] args)
         {
