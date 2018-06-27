@@ -9,10 +9,15 @@ namespace JonsTasks
 {
     class T1_EmailChecker
     {
+        public const string Welcome = "welcome to the email checker";
+
         static void Main(string[] args)
         {
+            Console.WriteLine(Welcome);
+            Console.WriteLine("============================");
             while (true)
             {
+                Console.Write("Enter Email Address: ");
                 String input = Console.ReadLine();
 
                 input = input.ToLower();
@@ -33,8 +38,8 @@ namespace JonsTasks
                     var address = new System.Net.Mail.MailAddress(input);
                     return true;
                 }
-                catch
-                {
+                catch //(incorectFormatExcrption ex)
+            {
                     return false;
                 }
         }
